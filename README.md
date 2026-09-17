@@ -16,15 +16,6 @@ A Fundação O Pão dos Pobres oferece cursos profissionalizantes gratuitos para
 
 <img width="400" height="214" alt="Portal de Cursos - Pão dos Pobres - Google Chrome 2026-09-17 15-58-16" src="https://github.com/user-attachments/assets/f0021e98-0e67-4665-8562-d5f5791e1881" />
 
-## ✅ Entregas desta atividade (Atividade 4-5)
-
-- [x] Header com slogan da instituição e botão de call-to-action (CTA)
-- [x] Seção "Sobre" e "Contato" com formulário de inscrição
-- [x] Interação em JavaScript: mensagem de agradecimento após envio do formulário
-- [x] Integração com a API **ViaCEP** para autopreenchimento de endereço
-- [x] Paleta de cores e tipografia definidas
-- [x] Repositório com branches `main` e `develop`, com histórico de commits granular
-
 ---
 
 ## 🎨 Identidade Visual
