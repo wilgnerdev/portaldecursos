@@ -52,7 +52,7 @@
                                 <option value="">Selecione um curso</option>
                                 <option value="adm">Assistente Administrativo</option>
                                 <option value="cabelo">Assistente de Cabeleireiro</option>
-                                <option value="programacao">Auxiliar de Desenvolvimento Web</option>
+                                <option value="desenvolvimento">Desenvolvimento Web</option>
                                 <option value="costura">Corte, Costura e Modelagem Sustentável</option>
                                 <option value="desporto">Desporto</option>
                                 <option value="elevadores">Eletromecânica de Elevadores</option>
@@ -101,17 +101,17 @@
                         </div>
                     </div>
 
-                    <div class="linha">
-                        <div class="campo-largo">
+                    <div class="linha idade">
+                        <div class="campo-largo idade">
                             <label for="data-nascimento">Data de Nascimento</label>
                             <input type="date" id="data-nascimento" name="dataNascimento" autocomplete="bday" required>
                         </div>
 
-                        <div class="campo-curto">
+                        <div class="campo-curto idade">
                             <label for="idade-calculada">Idade</label>
                             <!-- Preenchido via JS a partir de data-nascimento. readonly = usuário não digita, só visualiza. -->
                             <input type="text" id="idade-calculada" name="idadeCalculada" readonly placeholder="--" aria-describedby="idade-hint">
-                            <small id="idade-hint" class="campo-ajuda">Calculada automaticamente</small>
+                            <small id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</small>
                         </div>
                     </div>
 
@@ -125,10 +125,10 @@
                         <option value="outro">Outro</option>
                     </select>
                     <!-- Campo condicional: só aparece se genero = "outro". Escondido por padrão, JS remove .oculto -->
-                    <div class="campo-condicional oculto" data-condicional-de="genero" data-mostrar-quando="outro">
+                    <!-- <div class="campo-condicional oculto" data-condicional-de="genero" data-mostrar-quando="outro">
                         <label for="genero-outro">Se preferir, especifique</label>
                         <input type="text" id="genero-outro" name="generoOutro">
-                    </div>
+                    </div> -->
                 </fieldset>
 
                 <!-- ================= 3. ENDEREÇO ================= -->
@@ -168,7 +168,7 @@
                     </div>
 
                     <label for="onibus">Qual ônibus você utiliza para chegar até a Fundação?</label>
-                    <small class="campo-ajuda">Rua República, 801 - Cidade Baixa, Porto Alegre</small>
+                    <small class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</small>
                     <input type="text" id="onibus" name="onibus" placeholder="Ex: 265, T4, a pé..." required>
                 </fieldset>
 
@@ -225,8 +225,7 @@
                         <option value="3001+">Mais de R$3001,00</option>
                     </select>
 
-                    <fieldset class="fieldset__interno">
-                        <legend>Reside em Acolhimento Institucional?</legend>
+                        <label>Reside em Acolhimento Institucional?</label>
                         <div class="grupo-radio">
                             <label><input type="radio" name="acolhimento" value="sim" required> Sim</label>
                             <label><input type="radio" name="acolhimento" value="nao"> Não</label>
@@ -236,10 +235,8 @@
                             <label for="acolhimento-qual">Qual?</label>
                             <input type="text" id="acolhimento-qual" name="acolhimentoQual">
                         </div>
-                    </fieldset>
-
-                    <fieldset class="fieldset__interno">
-                        <legend>Você possui alguma deficiência?</legend>
+                    
+                        <label>Você possui alguma deficiência?</label>
                         <div class="grupo-radio">
                             <label><input type="radio" name="deficiencia" value="sim" required> Sim</label>
                             <label><input type="radio" name="deficiencia" value="nao"> Não</label>
@@ -249,15 +246,13 @@
                             <label for="deficiencia-qual">Qual?</label>
                             <input type="text" id="deficiencia-qual" name="deficienciaQual">
                         </div>
-                    </fieldset>
-
-                    <fieldset class="fieldset__interno">
-                        <legend>Já fez algum curso na Fundação Pão dos Pobres?</legend>
+                    
+                        <label>Já fez algum curso na Fundação Pão dos Pobres?</label>
                         <div class="grupo-radio">
                             <label><input type="radio" name="jaFezCurso" value="sim" required> Sim</label>
                             <label><input type="radio" name="jaFezCurso" value="nao"> Não</label>
                         </div>
-                    </fieldset>
+                    
                 </fieldset>
 
                 <!-- ================= 6. SOBRE VOCÊ ================= -->
@@ -277,11 +272,13 @@
                 <!-- ================= 7. CONSENTIMENTO (LGPD) ================= -->
                 <fieldset class="fieldset__formulario">
                     <legend>Consentimento</legend>
-                    <label class="linha-checkbox">
+                    <div class="linha-checkbox">
+                       <label class="consentimento" for="consentimento">
                         <input type="checkbox" id="consentimento-lgpd" name="consentimentoLgpd" required>
-                        Autorizo o uso dos meus dados pessoais para fins de análise e seleção no processo
-                        seletivo da Fundação O Pão dos Pobres, conforme a Lei Geral de Proteção de Dados (LGPD).
-                    </label>
+                        <span>Autorizo o uso dos meus dados pessoais para fins de análise e seleção no processo
+                        seletivo da Fundação O Pão dos Pobres, conforme a Lei Geral de Proteção de Dados (LGPD).</span>
+                       </label>
+                    </div>
                 </fieldset>
 
                 <button type="submit" class="btn">Enviar inscrição</button>
