@@ -73,6 +73,7 @@
 }
 
 .info-card-titulo {
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
