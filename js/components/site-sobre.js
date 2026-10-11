@@ -32,7 +32,7 @@ class SiteSobre extends HTMLElement {
                 </div>
 
                 <div class="info-card">
-                    <h2 class="info-card-titulo">Público-Alvo</h2>
+                    <h2 class="info-card-titulo">Público-alvo</h2>
                     <p>Adolescentes e jovens entre 14 e 24 anos (sem limite de idade para pessoas com deficiência), de famílias em situação de vulnerabilidade ou risco social.</p>
                 </div>
                 
