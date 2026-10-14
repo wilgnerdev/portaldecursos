@@ -24,7 +24,7 @@ body {
 .texto-banner h1 {
     text-align: center;
     color: #fff;
-    font-size: clamp(1.75rem, 5vw, 3.125rem);
+    font-size: clamp(2.2rem, 5vw, 3.125rem);
     font-weight: 900;
     line-height: 1;
     margin-bottom: 25px;
@@ -33,6 +33,7 @@ body {
 .texto-banner p {
     color: #fff;
     line-height: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .curso-detalhes-main {
@@ -222,7 +223,7 @@ button.skill-cabecalho:focus-visible {
 }
 
 .sidebar-info {
-    font-size: 11px;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
@@ -233,7 +234,7 @@ button.skill-cabecalho:focus-visible {
 .sidebar-titulo {
     font-family: var(--fonte-destaque);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 0;
     letter-spacing: -0.01em;
     color: #fff;
@@ -252,20 +253,8 @@ button.skill-cabecalho:focus-visible {
     flex-wrap: wrap;
 }
 
-.info-icone {
-    flex: 0 0 auto;
-    width: 30px;
-    height: 30px;
-    border-radius: 9px;
-    background: var(--bg-icone);
-    color: var(--cor-icone);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .info-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--cinza-opaco);
     margin: 0 0 2px;
     font-weight: 500;
@@ -310,11 +299,6 @@ button.skill-cabecalho:focus-visible {
     font-size: 0.8rem;
     color: var(--cinza-opaco);
     margin: 15px 0 0 0;
-}
-
-.info-icone i {
-    font-size: 16px;
-    line-height: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

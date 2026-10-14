@@ -61,7 +61,6 @@ function criarLinhaHabilidade(habilidade, indice) {
     const row = document.createElement("div");
     row.className = "skill-row";
 
-    // Cabeçalho: <button> se expansível, <div> se não houver tópicos
     const cabecalho = document.createElement(temTopicos ? "button" : "div");
     cabecalho.className = "skill-cabecalho";
 
@@ -73,7 +72,6 @@ function criarLinhaHabilidade(habilidade, indice) {
     row.appendChild(cabecalho);
 
     if (!temTopicos) {
-        // Fallback: mantém o comportamento antigo com descrição estática
         if (habilidade.descricao) {
             const sub = document.createElement("p");
             sub.className = "skill-sub";
@@ -83,13 +81,11 @@ function criarLinhaHabilidade(habilidade, indice) {
         return row;
     }
 
-    // Seta
     const seta = document.createElement("i");
     seta.className = "ti ti-chevron-down skill-seta";
     seta.setAttribute("aria-hidden", "true");
     cabecalho.appendChild(seta);
 
-    // Painel expansível
     const painelId = `skill-painel-${indice}`;
     cabecalho.type = "button";
     cabecalho.setAttribute("aria-expanded", "false");
