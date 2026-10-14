@@ -21,7 +21,7 @@ function montarPaginaCurso() {
 }
 
 function preencherTextos(curso) {
-    document.title = `${curso.titulo} - Pão dos Pobres`;
+    document.title = `${curso.titulo} | Pão dos Pobres`;
     document.getElementById("curso-titulo").textContent = curso.titulo;
     document.getElementById("curso-resumo").textContent = curso.resumoBanner;
     document.getElementById("curso-sobre").textContent = curso.sobre;
@@ -50,34 +50,75 @@ function preencherHabilidades(habilidades) {
         return;
     }
 
-    habilidades.forEach((habilidade) => {
-        container.appendChild(criarLinhaHabilidade(habilidade));
+    habilidades.forEach((habilidade, indice) => {
+        container.appendChild(criarLinhaHabilidade(habilidade, indice));
     });
 }
 
-function criarLinhaHabilidade(habilidade) {
+function criarLinhaHabilidade(habilidade, indice) {
+    const temTopicos = Array.isArray(habilidade.topicos) && habilidade.topicos.length > 0;
+
     const row = document.createElement("div");
     row.className = "skill-row";
 
-    const icone = document.createElement("div");
-    icone.className = "skill-icone";
-    const i = document.createElement("i");
-    i.className = `ti ti-${habilidade.icone}`;
-    icone.appendChild(i);
-
-    const body = document.createElement("div");
-    body.className = "skill-body";
+    // Cabeçalho: <button> se expansível, <div> se não houver tópicos
+    const cabecalho = document.createElement(temTopicos ? "button" : "div");
+    cabecalho.className = "skill-cabecalho";
 
     const titulo = document.createElement("p");
     titulo.className = "skill-titulo";
     titulo.textContent = habilidade.titulo;
 
-    const sub = document.createElement("p");
-    sub.className = "skill-sub";
-    sub.textContent = habilidade.descricao;
+    cabecalho.appendChild(titulo);
+    row.appendChild(cabecalho);
 
-    body.append(titulo, sub);
-    row.append(icone, body);
+    if (!temTopicos) {
+        // Fallback: mantém o comportamento antigo com descrição estática
+        if (habilidade.descricao) {
+            const sub = document.createElement("p");
+            sub.className = "skill-sub";
+            sub.textContent = habilidade.descricao;
+            row.appendChild(sub);
+        }
+        return row;
+    }
+
+    // Seta
+    const seta = document.createElement("i");
+    seta.className = "ti ti-chevron-down skill-seta";
+    seta.setAttribute("aria-hidden", "true");
+    cabecalho.appendChild(seta);
+
+    // Painel expansível
+    const painelId = `skill-painel-${indice}`;
+    cabecalho.type = "button";
+    cabecalho.setAttribute("aria-expanded", "false");
+    cabecalho.setAttribute("aria-controls", painelId);
+
+    const painel = document.createElement("div");
+    painel.className = "skill-painel";
+    painel.id = painelId;
+
+    const interno = document.createElement("div");
+    interno.className = "skill-painel-interno";
+
+    const lista = document.createElement("ul");
+    lista.className = "skill-topicos";
+    habilidade.topicos.forEach((texto) => {
+        const li = document.createElement("li");
+        li.textContent = texto;
+        lista.appendChild(li);
+    });
+
+    interno.appendChild(lista);
+    painel.appendChild(interno);
+    row.appendChild(painel);
+
+    cabecalho.addEventListener("click", () => {
+        const aberto = row.classList.toggle("aberto");
+        cabecalho.setAttribute("aria-expanded", String(aberto));
+    });
+
     return row;
 }
 
