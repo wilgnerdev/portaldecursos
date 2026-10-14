@@ -60,6 +60,7 @@
   border-radius: 50%;
   background: var(--azul-escuro);
   color: #fff;
+  z-index: 1000;
 }
 .back-to-top:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
 .back-to-top svg { width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

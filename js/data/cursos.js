@@ -75,8 +75,8 @@ export const cursos = [
       escolaridadeMinima: "fund-8"
     },
     turnos: [
-      { turno: "Manhã", observacao: "Início imediato" },
-      { turno: "Tarde", observacao: "Cadastro reserva" }
+      { turno: "Manhã", observacao: "" },
+      { turno: "Tarde", observacao: "" }
     ]
   },
 

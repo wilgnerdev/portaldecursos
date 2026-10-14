@@ -12,16 +12,16 @@ const cursos = [
         desc: "Técnicas de corte, coloração, tratamentos capilares e atendimento em salões."
     },
     {
-        id: "desenvolvimento-web",
-        titulo: "Desenvolvimento Web",
-        img: "programacao-card.webp",
-        desc: "Criação e arquitetura de softwares e sites modernos."
-    },
-    {
         id: "corte-costura-modelagem",
         titulo: "Corte, Costura e Modelagem Sustentável",
         img: "costura-card.webp",
         desc: "Confecção de roupas com foco em moda sustentável e técnicas de modelagem."
+    },
+    {
+        id: "desenvolvimento-web",
+        titulo: "Desenvolvimento Web",
+        img: "programacao-card.webp",
+        desc: "Criação e arquitetura de softwares e sites modernos."
     },
     {
         id: "desporto",
@@ -40,6 +40,12 @@ const cursos = [
         titulo: "Gastronomia",
         img: "gastronomia-card.webp",
         desc: "Técnicas culinárias profissionais e preparação de alimentos."
+    },
+    {
+        id: "mecanica-automotiva",
+        titulo: "Mecânica Automotiva",
+        img: "mecanica-card.webp",
+        desc: "Manutenção, reparo e diagnóstico de veículos automotores."
     },
     {
         id: "projetista-moveis",
@@ -64,12 +70,6 @@ const cursos = [
         titulo: "Vendas e Atendimento ao Cliente",
         img: "vendas-card.webp",
         desc: "Técnicas de vendas, atendimento ao cliente e negociação comercial."
-    },
-    {
-        id: "mecanica-automotiva",
-        titulo: "Mecânica Automotiva",
-        img: "mecanica-card.webp",
-        desc: "Manutenção, reparo e diagnóstico de veículos automotores."
     }
 ];
 
