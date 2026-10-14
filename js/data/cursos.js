@@ -1,14 +1,7 @@
-// js/data/cursos.js
-// Fonte única da verdade para os dados de cada curso.
-// Conteúdo base: formulário oficial de inscrição (Google Forms) + descrições/imagens
-// já em uso no site-grid.js (consolidadas aqui em 17/08/2026).
-// Campo "habilidades" dos cursos além de suporte-ti é RASCUNHO — revisar quando possível.
-
-// Nota geral válida para TODOS os cursos (não duplicar por curso)
 export const notaPcD = "Pessoas com deficiência são bem-vindas e não há limite de idade.";
 
 export const regrasInscricao = {
-    pcdSemLimiteIdade: true
+  pcdSemLimiteIdade: true
 };
 
 export const cursos = [
@@ -19,11 +12,55 @@ export const cursos = [
     imagemBanner: "suporte-ti-banner.webp",
     sobre: "Capacita para montagem e manutenção de hardware e software, instalação e atualização de sistemas operacionais e equipamentos.",
     habilidades: [
-      { icone: "device-desktop", titulo: "Montagem e manutenção de computadores", descricao: "Da troca de peças ao diagnóstico de falhas de hardware." },
-      { icone: "download", titulo: "Instalação de sistemas operacionais", descricao: "Instalação, configuração e atualização de softwares." },
-      { icone: "network", titulo: "Configuração de redes básicas", descricao: "Cabeamento, roteadores e conexão de dispositivos em rede." },
-      { icone: "headset", titulo: "Suporte técnico ao usuário", descricao: "Atendimento, escuta do problema e resolução guiada." },
-      { icone: "shield-lock", titulo: "Segurança da informação: noções básicas", descricao: "Boas práticas para proteger dados e equipamentos." }
+      {
+        titulo: "Montagem e manutenção de computadores",
+        topicos: [
+          "Componentes internos: placa-mãe, processador, memória e armazenamento",
+          "Montagem passo a passo de um computador",
+          "Troca de peças e upgrades",
+          "Diagnóstico de falhas de hardware",
+          "Limpeza e manutenção preventiva"
+        ]
+      },
+      {
+        titulo: "Instalação de sistemas operacionais",
+        topicos: [
+          "Particionamento e formatação de discos",
+          "Instalação do Windows e noções de Linux",
+          "Drivers e atualizações",
+          "Backup e restauração de dados"
+        ]
+      },
+      {
+        titulo: "Configuração de redes básicas",
+        topicos: [
+          "Conceitos de redes: endereço IP, DNS, DHCP e Wi-Fi",
+          "Cabeamento e crimpagem de cabos de rede",
+          "Configuração de roteadores e switches",
+          "Compartilhamento de arquivos e impressoras",
+          "Diagnóstico de problemas de conexão"
+        ]
+      },
+      {
+        titulo: "Suporte técnico ao usuário",
+        topicos: [
+          "Atendimento e escuta ativa do problema",
+          "Abertura e registro de chamados",
+          "Resolução guiada passo a passo",
+          "Noções de suporte remoto",
+          "Comunicação clara com usuários não técnicos"
+        ]
+      },
+      {
+        titulo: "Segurança da informação: noções básicas",
+        topicos: [
+          "Senhas fortes e autenticação em dois fatores",
+          "Antivírus e proteção contra malwares",
+          "Phishing e golpes digitais",
+          "Backup e proteção de dados",
+          "Noções básicas da LGPD"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -33,9 +70,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: false
     },
     requisitos: {
-    idadeMinima: 14,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 14,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "Início imediato" },
@@ -50,10 +87,42 @@ export const cursos = [
     imagemBanner: "mecanica-banner.webp",
     sobre: "O jovem aprende a realizar diagnósticos, manutenção preventiva (revisão) e corretiva (reparo) em veículos automotores. Jovens do curso irão realizar prática na empresa.",
     habilidades: [
-      { icone: "tool", titulo: "Diagnóstico de falhas veiculares", descricao: "Identificação de problemas mecânicos e elétricos em veículos." },
-      { icone: "settings", titulo: "Manutenção preventiva", descricao: "Revisões periódicas para evitar falhas futuras." },
-      { icone: "engine", titulo: "Manutenção corretiva", descricao: "Reparo de componentes mecânicos apresentando defeito." },
-      { icone: "briefcase", titulo: "Prática em empresa parceira", descricao: "Vivência real de oficina durante o curso." }
+      {
+        titulo: "Diagnóstico de falhas veiculares",
+        topicos: [
+          "Identificação de ruídos, vibrações e sinais de falha",
+          "Leitura de luzes de alerta do painel",
+          "Noções de sistema elétrico e bateria",
+          "Uso de instrumentos básicos de medição"
+        ]
+      },
+      {
+        titulo: "Manutenção preventiva",
+        topicos: [
+          "Troca de óleo e filtros",
+          "Revisão de freios, suspensão e pneus",
+          "Verificação de fluidos e correias",
+          "Plano de revisões periódicas"
+        ]
+      },
+      {
+        titulo: "Manutenção corretiva",
+        topicos: [
+          "Funcionamento básico do motor",
+          "Reparo e substituição de componentes mecânicos",
+          "Sistemas de freio e transmissão",
+          "Testes após o reparo"
+        ]
+      },
+      {
+        titulo: "Prática em empresa parceira",
+        topicos: [
+          "Rotina de oficina mecânica",
+          "Segurança e uso de EPIs",
+          "Trabalho em equipe e atendimento ao cliente",
+          "Organização de ferramentas e do espaço de trabalho"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -63,9 +132,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: false
     },
     requisitos: {
-    idadeMinima: 18,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 18,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -80,10 +149,44 @@ export const cursos = [
     imagemBanner: "costura-banner.webp",
     sobre: "Oferece formação profissional com conhecimentos e habilidades básicas e específicas ao exercício da função. Ao final do curso, os jovens deverão apresentar competências para organizar o trabalho em etapas, prever recursos, distribuir o tempo, tomar decisões, localizar e selecionar informações, atender procedimentos de segurança e legislação específica, aplicar princípios de preservação ambiental e Gestão pela Qualidade, e trabalhar eficazmente com outras pessoas.",
     habilidades: [
-      { icone: "scissors", titulo: "Técnicas de corte e costura", descricao: "Fundamentos práticos do ofício, do tecido à peça pronta." },
-      { icone: "ruler-2", titulo: "Modelagem de peças", descricao: "Construção de moldes e ajuste de medidas." },
-      { icone: "recycle", titulo: "Moda sustentável", descricao: "Reaproveitamento de materiais e consciência ambiental na produção." },
-      { icone: "clipboard-list", titulo: "Organização do trabalho", descricao: "Planejamento de etapas, recursos e prazos de produção." }
+      {
+        titulo: "Técnicas de corte e costura",
+        topicos: [
+          "Tipos de tecidos e aviamentos",
+          "Operação da máquina de costura reta e overloque",
+          "Pontos e acabamentos",
+          "Corte de tecidos com precisão",
+          "Confecção de peças básicas"
+        ]
+      },
+      {
+        titulo: "Modelagem de peças",
+        topicos: [
+          "Tomada de medidas do corpo",
+          "Traçado de moldes básicos",
+          "Ajustes e adaptações de modelagem",
+          "Interpretação de fichas técnicas"
+        ]
+      },
+      {
+        titulo: "Moda sustentável",
+        topicos: [
+          "Princípios de sustentabilidade na moda",
+          "Reaproveitamento de tecidos e retalhos",
+          "Redução de desperdício no corte",
+          "Customização e reforma de peças"
+        ]
+      },
+      {
+        titulo: "Organização do trabalho",
+        topicos: [
+          "Planejamento das etapas de produção",
+          "Cálculo de materiais e tempo",
+          "Normas de segurança no ambiente de trabalho",
+          "Gestão pela qualidade",
+          "Trabalho em equipe"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -93,9 +196,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 15,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-7"
+      idadeMinima: 15,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -110,10 +213,42 @@ export const cursos = [
     imagemBanner: "projetista-banner.webp",
     sobre: "Ao final do curso o aprendiz adquire competências compatíveis com o ofício de Auxiliar de Marcenaria e com as necessidades das empresas, promovendo sua inserção no mercado de trabalho e na sociedade. Também terá noções de como projetar móveis.",
     habilidades: [
-      { icone: "ruler-2", titulo: "Fundamentos de marcenaria", descricao: "Técnicas básicas do ofício de Auxiliar de Marcenaria." },
-      { icone: "armchair", titulo: "Noções de projeto de móveis", descricao: "Introdução ao desenho e planejamento de peças de mobiliário." },
-      { icone: "tool", titulo: "Uso de ferramentas e equipamentos", descricao: "Manuseio seguro de instrumentos de marcenaria." },
-      { icone: "briefcase", titulo: "Preparação para o mercado de trabalho", descricao: "Competências alinhadas às necessidades reais das empresas do setor." }
+      {
+        titulo: "Fundamentos de marcenaria",
+        topicos: [
+          "Tipos de madeira e derivados (MDF, compensado)",
+          "Medição, marcação e corte",
+          "Técnicas de união e encaixe",
+          "Lixamento e acabamento"
+        ]
+      },
+      {
+        titulo: "Noções de projeto de móveis",
+        topicos: [
+          "Leitura e interpretação de desenho técnico",
+          "Esboço e planejamento de peças",
+          "Ergonomia e funcionalidade",
+          "Lista de materiais e orçamento básico"
+        ]
+      },
+      {
+        titulo: "Uso de ferramentas e equipamentos",
+        topicos: [
+          "Ferramentas manuais de marcenaria",
+          "Serras, furadeiras e lixadeiras",
+          "Segurança e uso de EPIs",
+          "Cuidados e manutenção dos equipamentos"
+        ]
+      },
+      {
+        titulo: "Preparação para o mercado de trabalho",
+        topicos: [
+          "Rotina de uma marcenaria",
+          "Postura profissional e pontualidade",
+          "Trabalho em equipe",
+          "Direitos e deveres do jovem aprendiz"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -123,9 +258,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 16,
-    idadeMaxima: 22,
-    escolaridadeMinima: "medio-1"
+      idadeMinima: 16,
+      idadeMaxima: 22,
+      escolaridadeMinima: "medio-1"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -140,10 +275,42 @@ export const cursos = [
     imagemBanner: "elevadores-banner.webp",
     sobre: "Conhecer as tecnologias relacionadas à prestação de serviços de manutenção, troca de peças e assistência técnica. Proporciona experimentações práticas no ambiente de manutenção em equipamentos e reconhece a importância das relações humanas no trabalho, identificando possibilidades e limites da atuação profissional.",
     habilidades: [
-      { icone: "elevator", titulo: "Tecnologias de elevadores", descricao: "Fundamentos dos sistemas eletromecânicos de elevação." },
-      { icone: "tool", titulo: "Manutenção e troca de peças", descricao: "Serviços práticos de reparo e substituição de componentes." },
-      { icone: "shield-check", titulo: "Assistência técnica segura", descricao: "Procedimentos de segurança no ambiente de manutenção." },
-      { icone: "users", titulo: "Relações humanas no trabalho", descricao: "Postura profissional e limites de atuação em equipe." }
+      {
+        titulo: "Tecnologias de elevadores",
+        topicos: [
+          "Componentes: cabine, contrapeso, cabos e guias",
+          "Sistemas de tração e motores",
+          "Comandos e painéis elétricos",
+          "Tipos de elevadores e aplicações"
+        ]
+      },
+      {
+        titulo: "Manutenção e troca de peças",
+        topicos: [
+          "Manutenção preventiva e corretiva",
+          "Substituição de componentes",
+          "Lubrificação e ajustes",
+          "Registro de serviços realizados"
+        ]
+      },
+      {
+        titulo: "Assistência técnica segura",
+        topicos: [
+          "Normas de segurança e uso de EPIs",
+          "Trabalho em altura: noções básicas",
+          "Segurança elétrica",
+          "Procedimentos de emergência"
+        ]
+      },
+      {
+        titulo: "Relações humanas no trabalho",
+        topicos: [
+          "Comunicação em equipe",
+          "Atendimento ao cliente em chamados técnicos",
+          "Postura e ética profissional",
+          "Limites e possibilidades da atuação profissional"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -153,9 +320,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 17,
-    idadeMaxima: 22,
-    escolaridadeMinima: "medio-2"
+      idadeMinima: 17,
+      idadeMaxima: 22,
+      escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Tarde", observacao: "" }
@@ -169,10 +336,42 @@ export const cursos = [
     imagemBanner: "cabeleireiro-banner.webp",
     sobre: "Capacita os jovens a atuarem como assistentes em salões de beleza, no tratamento de cabelos. Oferece formação profissional com conhecimentos e habilidades básicas e específicas ao exercício da função.",
     habilidades: [
-      { icone: "scissors", titulo: "Tratamento capilar", descricao: "Técnicas básicas de cuidado e tratamento de cabelos." },
-      { icone: "droplet", titulo: "Produtos e procedimentos", descricao: "Uso correto de produtos usados em salão de beleza." },
-      { icone: "users", titulo: "Atendimento ao cliente", descricao: "Postura profissional no atendimento em salão." },
-      { icone: "certificate", titulo: "Prática assistida", descricao: "Habilidades específicas para atuar como assistente." }
+      {
+        titulo: "Tratamento capilar",
+        topicos: [
+          "Tipos de cabelo e couro cabeludo",
+          "Lavagem e hidratação",
+          "Tratamentos e escovação",
+          "Noções de corte e penteados"
+        ]
+      },
+      {
+        titulo: "Produtos e procedimentos",
+        topicos: [
+          "Shampoos, condicionadores e máscaras",
+          "Noções de coloração e descoloração",
+          "Preparo e aplicação de produtos",
+          "Higiene e biossegurança no salão"
+        ]
+      },
+      {
+        titulo: "Atendimento ao cliente",
+        topicos: [
+          "Recepção e acolhimento",
+          "Comunicação e escuta das necessidades do cliente",
+          "Postura e apresentação profissional",
+          "Organização da agenda e do espaço de trabalho"
+        ]
+      },
+      {
+        titulo: "Prática assistida",
+        topicos: [
+          "Apoio ao cabeleireiro nos procedimentos",
+          "Preparo de materiais e bancada",
+          "Acompanhamento de atendimentos reais",
+          "Trabalho em equipe no salão"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -182,9 +381,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 17,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 17,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -199,10 +398,43 @@ export const cursos = [
     imagemBanner: "vendas-banner.webp",
     sobre: "Reconhecer o panorama do varejo no mercado atual. Oferece um conjunto de experiências teórico-práticas na área de Vendas e reconhece os princípios da qualidade na prestação de serviços.",
     habilidades: [
-      { icone: "shopping-cart", titulo: "Panorama do varejo", descricao: "Entendimento do mercado de vendas atual." },
-      { icone: "headset", titulo: "Atendimento ao cliente", descricao: "Práticas de comunicação e resolução de demandas." },
-      { icone: "chart-bar", titulo: "Técnicas de vendas", descricao: "Experiências teórico-práticas na área comercial." },
-      { icone: "star", titulo: "Qualidade na prestação de serviços", descricao: "Princípios de excelência no atendimento." }
+      {
+        titulo: "Panorama do varejo",
+        topicos: [
+          "Como funciona o comércio varejista",
+          "Perfil do consumidor atual",
+          "Vendas presenciais e online",
+          "Rotinas de loja: estoque, vitrine e caixa"
+        ]
+      },
+      {
+        titulo: "Atendimento ao cliente",
+        topicos: [
+          "Comunicação clara e cordial",
+          "Escuta ativa das necessidades",
+          "Lidando com dúvidas e reclamações",
+          "Pós-venda e fidelização"
+        ]
+      },
+      {
+        titulo: "Técnicas de vendas",
+        topicos: [
+          "Abordagem e sondagem do cliente",
+          "Apresentação de produtos e benefícios",
+          "Negociação e contorno de objeções",
+          "Fechamento da venda",
+          "Noções de matemática comercial"
+        ]
+      },
+      {
+        titulo: "Qualidade na prestação de serviços",
+        topicos: [
+          "Princípios de qualidade no atendimento",
+          "Ética e postura profissional",
+          "Trabalho em equipe",
+          "Direitos do consumidor: noções básicas"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -212,9 +444,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 15,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 15,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -229,9 +461,33 @@ export const cursos = [
     imagemBanner: "desporto-banner.webp",
     sobre: "Oferece um conjunto de experiências teórico-práticas na área do Desporto. Executa as rotinas básicas do processo de trabalho da prática desportiva e reconhece o panorama da prática desportiva no mercado atual.",
     habilidades: [
-      { icone: "activity", titulo: "Prática desportiva", descricao: "Rotinas básicas do trabalho na área do desporto." },
-      { icone: "users", titulo: "Trabalho em equipe", descricao: "Vivências práticas em atividades esportivas coletivas." },
-      { icone: "target", titulo: "Panorama do mercado esportivo", descricao: "Reconhecimento das oportunidades na área desportiva." }
+      {
+        titulo: "Prática desportiva",
+        topicos: [
+          "Fundamentos de diferentes modalidades esportivas",
+          "Aquecimento, alongamento e condicionamento físico",
+          "Regras e arbitragem básica",
+          "Organização de atividades e materiais esportivos"
+        ]
+      },
+      {
+        titulo: "Trabalho em equipe",
+        topicos: [
+          "Jogos e atividades coletivas",
+          "Liderança e cooperação",
+          "Atividades recreativas para diferentes públicos",
+          "Respeito, ética e espírito esportivo"
+        ]
+      },
+      {
+        titulo: "Panorama do mercado esportivo",
+        topicos: [
+          "Áreas de atuação no esporte",
+          "Esporte, saúde e qualidade de vida",
+          "Eventos e projetos esportivos",
+          "Primeiros socorros: noções básicas"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -241,9 +497,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 14,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-7"
+      idadeMinima: 14,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -258,9 +514,33 @@ export const cursos = [
     imagemBanner: "gastronomia-banner.webp",
     sobre: "Ensina informações técnicas sobre Gastronomia. Capacita os jovens a desenvolver atividades de rotina do setor de cozinha, atendimento e restaurantes.",
     habilidades: [
-      { icone: "chef-hat", titulo: "Técnicas de cozinha", descricao: "Fundamentos técnicos do preparo de alimentos." },
-      { icone: "tools-kitchen-2", titulo: "Rotina do setor de cozinha", descricao: "Organização e boas práticas no ambiente de cozinha." },
-      { icone: "users", titulo: "Atendimento em restaurantes", descricao: "Noções de atendimento ao cliente no setor gastronômico." }
+      {
+        titulo: "Técnicas de cozinha",
+        topicos: [
+          "Cortes e preparo de ingredientes",
+          "Métodos de cocção: assar, refogar, grelhar e cozinhar",
+          "Preparo de molhos, massas e sobremesas básicas",
+          "Aproveitamento integral dos alimentos"
+        ]
+      },
+      {
+        titulo: "Rotina do setor de cozinha",
+        topicos: [
+          "Higiene pessoal e manipulação segura de alimentos",
+          "Organização da bancada (mise en place)",
+          "Armazenamento e controle de estoque",
+          "Uso e cuidados com utensílios e equipamentos"
+        ]
+      },
+      {
+        titulo: "Atendimento em restaurantes",
+        topicos: [
+          "Postura e apresentação profissional",
+          "Atendimento ao cliente no salão",
+          "Comunicação entre cozinha e salão",
+          "Trabalho em equipe"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -270,9 +550,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 18,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 18,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -287,9 +567,33 @@ export const cursos = [
     imagemBanner: "refrigeracao-banner.webp",
     sobre: "Prepara os aprendizes para auxiliar os serviços de instalação, reparação e manutenção de máquinas e equipamentos de ar-condicionado em ambientes residenciais, comerciais e industriais.",
     habilidades: [
-      { icone: "snowflake", titulo: "Instalação de climatização", descricao: "Auxílio na instalação de equipamentos de ar-condicionado." },
-      { icone: "tool", titulo: "Reparação de equipamentos", descricao: "Diagnóstico e correção de falhas em máquinas de refrigeração." },
-      { icone: "settings", titulo: "Manutenção preventiva", descricao: "Rotinas de manutenção em ambientes residenciais, comerciais e industriais." }
+      {
+        titulo: "Instalação de climatização",
+        topicos: [
+          "Princípios do ciclo de refrigeração",
+          "Tipos de aparelhos: split, janela e outros",
+          "Instalação de unidades internas e externas",
+          "Tubulação, drenagem e conexões elétricas básicas"
+        ]
+      },
+      {
+        titulo: "Reparação de equipamentos",
+        topicos: [
+          "Componentes: compressor, condensador e evaporador",
+          "Diagnóstico de falhas comuns",
+          "Substituição de peças",
+          "Uso de ferramentas e instrumentos de medição"
+        ]
+      },
+      {
+        titulo: "Manutenção preventiva",
+        topicos: [
+          "Limpeza de filtros e serpentinas",
+          "Verificação de funcionamento e eficiência",
+          "Rotinas em ambientes residenciais, comerciais e industriais",
+          "Segurança, EPIs e descarte correto de resíduos"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -299,9 +603,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 18,
-    idadeMaxima: 22,
-    escolaridadeMinima: "medio-2"
+      idadeMinima: 18,
+      idadeMaxima: 22,
+      escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -316,10 +620,42 @@ export const cursos = [
     imagemBanner: "adm-banner.webp",
     sobre: "Oferece formação profissional básica voltada ao desenvolvimento de competências técnicas e socioemocionais necessárias ao exercício de atividades administrativas em empresas públicas e privadas. Prepara o jovem para atuar em rotinas de escritório, controle de documentos, atendimento ao público, elaboração de relatórios, apoio em processos de gestão e execução de tarefas relacionadas à administração de recursos materiais e humanos.",
     habilidades: [
-      { icone: "file-text", titulo: "Rotinas de escritório", descricao: "Controle de documentos e organização administrativa." },
-      { icone: "users", titulo: "Atendimento ao público", descricao: "Comunicação profissional em ambiente corporativo." },
-      { icone: "clipboard-list", titulo: "Elaboração de relatórios", descricao: "Apoio em processos de gestão e documentação." },
-      { icone: "briefcase", titulo: "Administração de recursos", descricao: "Noções de gestão de recursos materiais e humanos." }
+      {
+        titulo: "Rotinas de escritório",
+        topicos: [
+          "Organização e arquivamento de documentos",
+          "Redação de e-mails e comunicados",
+          "Informática básica: editor de texto e planilhas",
+          "Agenda, protocolo e controle de correspondências"
+        ]
+      },
+      {
+        titulo: "Atendimento ao público",
+        topicos: [
+          "Atendimento presencial e telefônico",
+          "Comunicação profissional",
+          "Postura e ética no ambiente corporativo",
+          "Lidando com situações difíceis"
+        ]
+      },
+      {
+        titulo: "Elaboração de relatórios",
+        topicos: [
+          "Coleta e organização de informações",
+          "Planilhas, tabelas e gráficos simples",
+          "Estrutura de um relatório",
+          "Apoio em processos de gestão"
+        ]
+      },
+      {
+        titulo: "Administração de recursos",
+        topicos: [
+          "Controle de materiais e estoque",
+          "Noções de rotinas de recursos humanos",
+          "Noções de finanças e orçamento",
+          "Planejamento e organização do tempo"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -329,9 +665,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 14,
-    idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+      idadeMinima: 14,
+      idadeMaxima: 22,
+      escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -346,11 +682,53 @@ export const cursos = [
     imagemBanner: "programacao-banner.webp",
     sobre: "Forma o aluno em desenvolvimento web e tecnologias digitais, começando por fundamentos de informática, lógica de programação e uso de IDEs. Ensina a criar sites responsivos com HTML5 e CSS3, desenvolver backend em PHP, estruturar e manipular bancos de dados em SQL e construir aplicações completas com operações CRUD usando PHP, SQL e Bootstrap. Inclui introdução ao desenvolvimento mobile, uso de Git e GitHub, metodologias ágeis (Scrum e Kanban) e integração prática de conceitos de Inteligência Artificial e Machine Learning em projetos web.",
     habilidades: [
-      { icone: "code", titulo: "Lógica de programação", descricao: "Fundamentos de informática e uso de IDEs." },
-      { icone: "device-laptop", titulo: "Sites responsivos com HTML5, CSS3 e JavaScript", descricao: "Construção de páginas web do zero." },
-      { icone: "database", titulo: "Backend em PHP e banco de dados SQL", descricao: "Aplicações completas com operações CRUD e Bootstrap." },
-      { icone: "git-branch", titulo: "Versionamento com Git e GitHub", descricao: "Metodologias ágeis: Scrum e Kanban." },
-      { icone: "brain", titulo: "Introdução a IA e Machine Learning", descricao: "Integração prática de conceitos de IA em projetos web." }
+      {
+        titulo: "Lógica de programação",
+        topicos: [
+          "Fundamentos de informática",
+          "Algoritmos e fluxogramas",
+          "Variáveis, condicionais e laços de repetição",
+          "Funções e vetores",
+          "Uso de IDEs e editores de código"
+        ]
+      },
+      {
+        titulo: "Sites responsivos com HTML5, CSS3 e JavaScript",
+        topicos: [
+          "Estrutura semântica com HTML5",
+          "Estilização com CSS3, Flexbox e Grid",
+          "Design responsivo e media queries",
+          "Introdução ao JavaScript e manipulação do DOM"
+        ]
+      },
+      {
+        titulo: "Backend em PHP e banco de dados SQL",
+        topicos: [
+          "Fundamentos de PHP",
+          "Modelagem de dados e comandos SQL",
+          "Operações CRUD",
+          "Construção de aplicações completas com Bootstrap",
+          "Introdução ao desenvolvimento mobile"
+        ]
+      },
+      {
+        titulo: "Versionamento com Git e GitHub",
+        topicos: [
+          "Conceitos de versionamento de código",
+          "Comandos básicos do Git: commit, branch e merge",
+          "Colaboração com GitHub",
+          "Metodologias ágeis: Scrum e Kanban"
+        ]
+      },
+      {
+        titulo: "Introdução a IA e Machine Learning",
+        topicos: [
+          "Conceitos de Inteligência Artificial",
+          "Introdução ao Machine Learning",
+          "Uso de APIs de IA em projetos web",
+          "Aplicações práticas e uso responsável de IA"
+        ]
+      }
     ],
     fichaTecnica: {
       cargaHoraria: "1 ano",
@@ -360,9 +738,9 @@ export const cursos = [
       exigeVulnerabilidadeSocial: true
     },
     requisitos: {
-    idadeMinima: 17,
-    idadeMaxima: 22,
-    escolaridadeMinima: "medio-2"
+      idadeMinima: 17,
+      idadeMaxima: 22,
+      escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Tarde", observacao: "" }
@@ -371,15 +749,15 @@ export const cursos = [
 ];
 
 export const escolaridades = {
-    "fund-7": 1,
-    "fund-8": 2,
-    "fund-9": 3,
-    "medio-1": 4,
-    "medio-2": 5,
-    "medio-3": 6,
-    "medio-completo": 7,
-    "nao-estudando": 8,
-    "superior-cursando": 9
+  "fund-7": 1,
+  "fund-8": 2,
+  "fund-9": 3,
+  "medio-1": 4,
+  "medio-2": 5,
+  "medio-3": 6,
+  "medio-completo": 7,
+  "nao-estudando": 8,
+  "superior-cursando": 9
 };
 
 // Helper de busca — usado pelo template dinâmico via ?curso=<id> na URL
