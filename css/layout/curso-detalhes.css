@@ -3,9 +3,9 @@ body {
 }
 
 .curso-banner {
-    background-image: 
-    linear-gradient(to right, rgba(13, 43, 82, 0.85), rgba(13, 43, 82, 0.15)), 
-    var(--curso-imagem-banner, none);
+    background-image:
+        linear-gradient(to right, rgba(13, 43, 82, 0.85), rgba(13, 43, 82, 0.15)),
+        var(--curso-imagem-banner, none);
     background-color: var(--azul-marinho-profundo);
     background-size: cover;
     background-position: center;
@@ -41,7 +41,7 @@ body {
     max-width: 1250px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 28px;
     align-items: start;
     padding: 56px 24px;
@@ -121,6 +121,9 @@ button.skill-cabecalho:focus-visible {
 
 .skill-titulo {
     flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
     font-weight: 600;
     font-size: 1.1rem;
     margin: 0;
@@ -155,7 +158,8 @@ button.skill-cabecalho:focus-visible {
 
 .skill-topicos {
     margin: 0;
-    padding: 0 8px 18px 8px; /* alinha com o título */
+    padding: 0 8px 18px 8px;
+    /* alinha com o título */
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -187,12 +191,12 @@ button.skill-cabecalho:focus-visible {
     line-height: 1.5;
 }
 
-.skill-row > .skill-sub {
+.skill-row>.skill-sub {
     padding: 0 8px 16px 8px;
 }
 
 .sidebar-card {
-    order: -1;   
+    order: -1;
     background: #fff;
     border: 1px solid var(--linha-card);
     border-radius: 18px;
@@ -235,10 +239,12 @@ button.skill-cabecalho:focus-visible {
 .sidebar-titulo {
     font-family: var(--fonte-destaque);
     font-weight: 700;
-    font-size: 1.5rem;
     margin: 0;
     letter-spacing: -0.01em;
     color: #fff;
+    font-size: clamp(1.25rem, 5.5vw, 1.5rem);
+    overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 .sidebar-body {
@@ -303,6 +309,7 @@ button.skill-cabecalho:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .skill-painel,
     .skill-seta {
         transition: none;
@@ -311,7 +318,7 @@ button.skill-cabecalho:focus-visible {
 
 @media (min-width: 1090px) {
     .curso-detalhes-main {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     }
 
     .curso-principal,
@@ -322,5 +329,24 @@ button.skill-cabecalho:focus-visible {
     .sidebar-card {
         position: sticky;
         top: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-detalhes-main {
+        padding: 32px 12px;
+    }
+
+    .secao-curso {
+        padding: 24px 16px;
+    }
+
+    .skill-cabecalho {
+        gap: 8px;
+        padding: 14px 4px;
+    }
+
+    .skill-titulo {
+        font-size: 1rem;
     }
 }
