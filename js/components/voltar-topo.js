@@ -7,9 +7,21 @@ class VoltarTopo extends HTMLElement {
                 <path d="M12 19V5" />
                 <path d="M5 12l7-7 7 7" />
             </svg>
-        </a>        
+        </a>
         `
+
+        if (!CSS.supports('animation-timeline: scroll()')) {
+            const botao = this.querySelector('.back-to-top')
+            this.onScroll = () => {
+                botao.classList.toggle('visivel', window.scrollY > window.innerHeight * 0.5)
+            }
+            window.addEventListener('scroll', this.onScroll, { passive: true })
+            this.onScroll()
+        }
+    }
+
+    disconnectedCallback() {
+        window.removeEventListener('scroll', this.onScroll)
     }
 }
-
 customElements.define('voltar-topo', VoltarTopo)
