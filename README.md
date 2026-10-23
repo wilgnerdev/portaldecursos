@@ -14,7 +14,8 @@ A Fundação O Pão dos Pobres oferece cursos profissionalizantes gratuitos para
 
 ## 📸 Preview
 
-<img width="400" height="214" alt="Portal de Cursos - Pão dos Pobres - Google Chrome 2026-09-17 15-58-16" src="https://github.com/user-attachments/assets/f0021e98-0e67-4665-8562-d5f5791e1881" />
+<img width="400" height="225" alt="Portal de Cursos - Pão dos Pobres - Google Chrome 2026-10-23 14-41-56 (1)" src="https://github.com/user-attachments/assets/1995b929-8d0d-4f56-9a99-d732f78e3164" />
+
 
 ---
 
